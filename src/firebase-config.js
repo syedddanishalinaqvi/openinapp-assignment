@@ -4,7 +4,7 @@ import { getFirestore} from "firebase/firestore"
 
 const firebaseConfig = {
     apiKey: "AIzaSyAqvm4jjyYR36pqkxP-_m1MfdgFcSTgLwo",
-    authDomain: "openinapp-assignment-three.vercel.app/",
+    authDomain: "openinapp-d3d56.firebaseapp.com",
     projectId: "openinapp-d3d56",
     storageBucket: "openinapp-d3d56.appspot.com",
     messagingSenderId: "453353808955",
