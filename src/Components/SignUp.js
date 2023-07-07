@@ -40,7 +40,6 @@ const SignUp = (props) => {
 
                     <button className="col-2" type="button"><div class="apple"><img src={appleIcon} alt="appl" /></div>Sign in with Apple</button>
                 </div>
-                <br />
                 <div className="form">
                     <p>Email address</p>
                     <input class="email" type="text" placeholder='Enter your Email' />

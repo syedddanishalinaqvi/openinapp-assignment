@@ -1,3 +1,8 @@
+*{
+  margin:0;
+  padding:0;
+}
+
 .row {
   display: flex;
 }
@@ -11,7 +16,8 @@
 }
 .dashboard {
   height: 944px;
-  width: 280px;
+  width: 70%;
+  align-items: center;
   border-radius: 30px;
   margin: 40px 60px 40px 40px;
   background-color: black;
@@ -19,12 +25,14 @@
 .title {
   color: white;
   font-size: 36px;
+  width:30%;
   font-weight: 700;
   padding: 60px 107px 60px 50px;
 }
 .d-content {
   padding: 0px 88px 356px 50px;
   color: white;
+  width: 50%;
   display: inline-block;
 }
 .d-dash {
@@ -100,7 +108,7 @@
 }
 .header {
   height: 30px;
-  margin: 60px 47px 40px 20px;
+  margin: 60px 47px 0px 20px;
 }
 .d-title {
   float: left;
@@ -146,15 +154,16 @@
 }
 .cards {
   height: 140px;
-  width: 1224px;
+  width: 90%;
+  margin-top: 40px;
   display: flex;
+  justify-content: space-between;
   flex-direction: row;
-  flex-wrap: wrap;
 }
 .card-1 {
   height: 140px;
   width: 241px;
-  margin-left: 20px;
+  /* margin-left: 20px; */
   background-color: #ddefe0;
   border: none;
   border-radius: 20px;
@@ -181,7 +190,7 @@
 .card-2 {
   height: 140px;
   width: 241px;
-  margin-left: 80px;
+  /* margin-left: 80px; */
   background-color: #f4ecdd;
   border: none;
   border-radius: 20px;
@@ -211,7 +220,7 @@
 .card-3 {
   height: 140px;
   width: 241px;
-  margin-left: 80px;
+  /* margin-left: 80px; */
   background-color: #efdada;
   border: none;
   border-radius: 20px;
@@ -241,7 +250,7 @@
 .card-4 {
   height: 140px;
   width: 241px;
-  margin-left: 80px;
+  /* margin-left: 80px; */
   background-color: #dee0ef;
   border: none;
   border-radius: 20px;
@@ -269,20 +278,26 @@
   font-weight: 700;
 }
 .graph {
-  height: 380px;
-  width: 1200px;
-  margin: 40px 60px 40px 20px;
+  height: 380px ;
+  width: 90%;
+  align-items: center;
+  margin-top: 40px;
   background-color: white;
   border-radius: 20px;
   border: none;
 }
+.nothing{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
 .headings {
-  width: 40%;
-  padding: 40px 867px 5px 90px;
+  width: 10%;
+  padding: 40px 0px 5px 90px;
 }
 .activities {
-  margin: 0;
   color: black;
+  width: 10%;
   font-size: 18px;
   font-weight: 700;
 }
@@ -297,16 +312,13 @@
   font-weight: 400;
   border: none;
 }
-.nothing {
-  display: flex;
-}
 .values {
-  position: relative;
-  top: 60px;
-  right: 100px;
-  width: 60%;
   display: flex;
-  float: right;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-top: 60px;
+  padding-left: 700px;
+  justify-content: space-between;
 }
 .user {
   padding-right: 20px;
@@ -332,6 +344,10 @@
 }
 .lower {
   display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin-top: 20px;
+  flex-direction: row;
 }
 .pie-chart {
   height: 256px;
@@ -343,10 +359,12 @@
 }
 .products {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-between;
+  height: 30%;
 }
 .products p {
-  float: left;
   color: black;
   font-size: 18px;
   font-weight: 700;
@@ -354,8 +372,7 @@
   margin-top: 30px;
 }
 .sch-date {
-  float: right;
-  margin: 31px 40px 26px 175px;
+  margin: 31px 40px 0px 0px;
 }
 .sch-date select {
   border: none;
@@ -366,15 +383,16 @@
 }
 .chart {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: left;
+  width: 100%;
 }
 .pie {
-  float: left;
   height: 134px;
-  width: 134px;
+  width: 30%;
   margin: 0px 50px 40px 60px;
 }
 .types {
+  width: 70%;
   float: right;
 }
 .types div {
@@ -396,14 +414,13 @@
 .schedule {
   height: 256px;
   width: 480px;
-  margin-left: 240px;
   background-color: white;
   border-radius: 20px;
   border: none;
 }
 .see-all {
   float: right;
-  margin: 31px 0px 26px 225px;
+  margin: 31px 40px 26px 225px;
   border: none;
   color: #858585;
   font-size: 12px;
@@ -475,4 +492,67 @@ font-weight: 400;
 font-size: 12px;
 font-family: Lato;
 font-weight: 400;
+}
+@media screen and (max-width:1090px){
+  .cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center space-between;
+    align-items: center;
+    margin: 0;
+    padding:0;
+    width: 100%;
+    height: 30%;
+    overflow:hidden;
+  }
+  .graph{
+    display: none;
+  }
+  .lower{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    padding:0;
+    width: 100%;
+    height: 70%;
+    align-items: center;
+    overflow:hidden;
+  }
+  .schedule{
+    margin:10px 0px 0px 11px;
+    padding:0;
+  }
+}
+
+@media screen and (max-width:1482px){
+  .d-column-1{
+    display: none;
+    overflow: hidden;
+  }
+  .d-column-2{
+    padding-left: 60px;
+    overflow: hidden;
+    width:100%;
+  }
+}
+@media screen and (max-width:1650px){
+  .d-column-2{
+    overflow:hidden;
+  }
+}
+@media screen and (max-width:485px){
+  .lower{
+    display: none;
+  }
+  .cards{
+    justify-content: center;
+    width: 90%;
+    height: 100%;
+    overflow:hidden;
+  }
+  .search{
+    display: none;
+  }
 }

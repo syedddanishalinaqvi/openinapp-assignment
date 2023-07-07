@@ -1,5 +1,5 @@
 import React from 'react'
-import { auth } from "../firebase-config"
+import { auth} from "../firebase-config"
 import './Css/Dashboard.css'
 import Dash from './Images/dashboard_icon.svg'
 import Trans from './Images/transaction_icon.svg'
@@ -20,14 +20,13 @@ import rightarrow from './Images/right_arrow.svg'
 import { Chart } from "react-google-charts";
 
 
-
 const Dashboard = () => {
   const GraphData = [
     ["Weeks", "User", "Guest"],
-    ["Week 1", 100, 200],
-    ["Week 2", 500, 460],
-    ["Week 3", 150, 300],
-    ["Week 4", 450, 540],
+    ["Week 1", 100, 100],
+    ["Week 2", 400, 400],
+    ["Week 3", 100, 200],
+    ["Week 4", 300, 100],
   ];
 
   const GraphOptions = {
@@ -40,9 +39,9 @@ const Dashboard = () => {
 
   const PieData = [
     ["Cloths", "Sales"],
-    ["Basic Tees", 55],
-    ["Pants", 31],
-    ["Super Hoodies", 14],
+    ["Basic Tees", 30],
+    ["Pants", 20],
+    ["Super Hoodies", 50],
 
   ];
 
@@ -81,7 +80,7 @@ const Dashboard = () => {
           <div className='d-header'>
             <input type="text" className='search' placeholder='Search..' />
             <img src={bell} className='bell' alt="bell" />
-            <img src="" className="display-pic" alt="pto" />
+            <img src={auth.currentUser.photoURL} className="display-pic" alt="pto" />
           </div>
         </div>
         <div className="cards">
@@ -93,7 +92,7 @@ const Dashboard = () => {
           <div className="card-2">
             <img src={Transactions} alt="/" />
             <p>Total Transactions</p>
-            <div>1,520</div>
+            <div>$1,520</div>
           </div>
           <div className="card-3">
             <img src={Likes} alt="/" />
@@ -103,7 +102,7 @@ const Dashboard = () => {
           <div className="card-4">
             <img src={Users} alt="/" />
             <p>Total Users</p>
-            <div>892</div>
+            <div>827</div>
           </div>
         </div>
         <div className="graph">
@@ -124,7 +123,7 @@ const Dashboard = () => {
           <div className='main-graph'>
             <Chart
               chartType="LineChart"
-              width="1200px"
+              width="100%"
               height="290px"
               data={GraphData}
               options={GraphOptions}
